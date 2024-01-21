@@ -2,22 +2,19 @@
 const { data: hello } = await useFetch("/api/hello");
 const { data } = await useFetch("/api/disney");
 const characters = data;
-const clientSideExample = "Updated Blah";
+const clientSideExample = "This an example of fetched data";
 </script>
 
 <template>
   <main>
     <header>
-      <h1>Hello CPRG</h1>
+      <h1>Assignment 2 - Data Fetching</h1>
     </header>
 
     <section>
-      <h2>Hello Data Endpoint Example</h2>
+      <h2>Student: Angelica Cadiz</h2>
       <p>{{ hello.hello }}</p>
       {{ clientSideExample }}
-    </section>
-    <pre>{{ characters }}</pre>
-    <section>
       <h2>Disney Character Fetch</h2>
       <ul>
         <li v-for="character in characters.data" :key="character.id">
